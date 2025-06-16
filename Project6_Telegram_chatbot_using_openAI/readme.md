@@ -10,7 +10,7 @@ A lightweight, effective Telegram bot that leverages OpenAI (e.g. GPT‑3.5, GPT
 User → Telegram (Front-End) → Backend (calls OpenAI API) → LLM → Response → Backend → Telegram → User
 
 
-**Flow Description**:
+## Flow Description:
 1. **User** sends a message to the Telegram bot.
 2. **Telegram** forwards the message to your **backend server**.
 3. The backend sends the prompt to **OpenAI's API**.
