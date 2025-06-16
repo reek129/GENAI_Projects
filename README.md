@@ -62,9 +62,9 @@ A curated set of **six hands‑on projects** exploring generative AI—from clas
    cd Project6_Telegram_chatbot_using_openAI
 
 ## Configure environment variables:
+- OPENAI_API_KEY=  your-key
+- TELEGRAM_BOT_TOKEN=  your-token
 
-**OPENAI_API_KEY= # your-key
-**TELEGRAM_BOT_TOKEN= # your-token
 
 ## Install dependencies:
 
