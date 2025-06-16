@@ -32,7 +32,7 @@ A curated set of **six hands‑on projects** exploring generative AI—from clas
   - Real‑time Telegram Bot API handling
   - Prompt/response logic via GPT‑3.5/4  
   - Deployment‐ready framework  
-  - Inspired by the DSwithBappy tutorial video above :contentReference[oaicite:2]{index=2}
+  
 
 ---
 
@@ -64,11 +64,10 @@ A curated set of **six hands‑on projects** exploring generative AI—from clas
 ## Configure environment variables:
 
 OPENAI_API_KEY=<your-key>
+
 TELEGRAM_BOT_TOKEN=<your-token>
 
 ## Install dependencies:
 
 pip install -r requirements.txt
-Run the script, e.g.:
 
-Interact with your Telegram bot to see generative responses in action!
