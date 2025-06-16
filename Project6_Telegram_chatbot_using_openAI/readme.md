@@ -20,3 +20,13 @@ A feature‑rich Telegram bot that leverages OpenAI (GPT‑3.5, GPT‑4) to gene
 User → Telegram (Front-End) → Backend (calls OpenAI API) → LLM → Response → Backend → Telegram → User
 
 
+
+## Add credentials (Create a .env file:)
+OPENAI_API_KEY=your-openai-api-key
+TELEGRAM_BOT_TOKEN=your-telegram-bot-token
+
+## Install requirements
+pip install -r requirements.txt
+
+## Run 
+python main.py
