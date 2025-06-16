@@ -63,9 +63,9 @@ A curated set of **six hands‑on projects** exploring generative AI—from clas
 
 ## Configure environment variables:
 
-OPENAI_API_KEY=<your-key>
+OPENAI_API_KEY= <your-key>
 
-TELEGRAM_BOT_TOKEN=<your-token>
+TELEGRAM_BOT_TOKEN= <your-token>
 
 ## Install dependencies:
 
