@@ -9,14 +9,14 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 client = OpenAI(api_key=OPENAI_API_KEY)
 
-audio = open("Recording.mp3","rb")
+# audio = open("Recording.mp3","rb")
 
-output = client.audio.translations.create(
-        model="whisper-1",
-        file=audio
-    )
-print(output)
-print(output.text)
+# output = client.audio.translations.create(
+#         model="whisper-1",
+#         file=audio
+#     )
+# print(output)
+# print(output.text)
 
 # initialize the flask
 app =Flask(__name__)
