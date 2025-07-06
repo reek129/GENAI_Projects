@@ -1,4 +1,4 @@
-from fastapi import FastAPI, Form, Request, Response, File, Depends, HTTPException, status
+from fastapi import FastAPI, Form, Request, Response, File, Depends, HTTPException, status, UploadFile
 from fastapi.responses import RedirectResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
@@ -19,20 +19,20 @@ templates = Jinja2Templates(directory="templates")
 async def index(request: Request):
     return templates.TemplateResponse("index.html", {"request": request})
 
+
 @app.post("/upload")
-async def chat(request: Request, pdf_file: bytes = File(), filename: str = Form(...)):
+async def chat(request: Request, pdf_file: UploadFile = File(...), filename: str = Form(...)):
     base_folder = 'static/docs/'
     if not os.path.isdir(base_folder):
         os.mkdir(base_folder)
+
     pdf_filename = os.path.join(base_folder, filename)
 
     async with aiofiles.open(pdf_filename, 'wb') as f:
-        await f.write(pdf_file)
- 
-    response_data = jsonable_encoder(json.dumps({"msg": 'success',"pdf_filename": pdf_filename}))
-    res = Response(response_data)
-    return res
+        content = await pdf_file.read()
+        await f.write(content)
 
+    return {"msg": "success", "pdf_filename": pdf_filename}
 
 
 def get_csv(file_path):
